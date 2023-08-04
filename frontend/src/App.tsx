@@ -1,3 +1,4 @@
+import React from 'react';
 import './App.css';
 import {
   BrowserRouter as Router,
@@ -21,9 +22,13 @@ function App() {
         </Route>
         <Route
           exact
-          path="/foods"
+          path="/restaurants/:restaurantsId/foods"
+          render={({match}) => 
+            <Foods
+              id={match.params.restaurantsId}
+            />
+          }
         >
-          <Foods />
         </Route>
         <Route
           exact
