@@ -7,7 +7,6 @@ export const fetchRestaurants = async () => {
     return result.data as restaurants
   } catch (error){
     console.error(error)
-    return null
   }
 }
 
