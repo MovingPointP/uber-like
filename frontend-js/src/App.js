@@ -7,9 +7,9 @@ import {
 } from "react-router-dom";
 
 // components
-import { Restaurants } from './containers/Restaurants';
-import { Foods } from './containers/Foods';
-import { Orders } from './containers/Orders';
+import { Restaurants } from './containers/Restaurants.jsx';
+import { Foods } from './containers/Foods.jsx';
+import { Orders } from './containers/Orders.jsx';
 
 function App() {
   return (
@@ -23,13 +23,12 @@ function App() {
         <Route
           exact
           path="/restaurants/:restaurantsId/foods"
-          render={({match}) => 
+          render={({ match }) =>
             <Foods
-              id={match.params.restaurantsId}
+              match={match}
             />
           }
-        >
-        </Route>
+        />
         <Route
           exact
           path="/orders">
