@@ -59,7 +59,7 @@ module Api
       end
 
       def set_line_food(ordered_food)
-        if ordered_food.line_food.exists?
+        if ordered_food.line_food.present?
           @line_food = ordered_food.line_food
           @line_food.attributes = {
             count: ordered_food.line_food.count + params[:count],

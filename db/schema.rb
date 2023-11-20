@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(version: 2023_07_24_042441) do
     t.index ["restaurant_id"], name: "index_line_foods_on_restaurant_id"
   end
 
-  create_table "others", force: :cascade do |t|
+  create_table "orders", force: :cascade do |t|
     t.integer "total_price", default: 0, null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
